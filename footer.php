@@ -10,7 +10,7 @@
                             <div class="col-md-6 col-lg-4">
                                 <p class="widget-newsletter-content ls-10 text-white mb-0">Get all the latest information on Events, Sales and Offers.</p>
                                 <span class="widget-newsletter-content d-block font-weight-bold ls-10 text-white">Receive
-                                    $10 coupon for first shopping.</span>
+                                    £10 coupon for first shopping.</span>
                             </div>
                             <div class="col-md-10 col-lg-5">
                                 <form action="#" class="mb-0">
@@ -29,7 +29,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <a href="demo22.html">
-                                    <img class="logo" src="assets/images/logo-black.png" alt="Porto Logo" width="220" height="80">
+                                    <img class="logo" src="img/logo.png" alt="Porto Logo" width="220" height="80">
                                 </a>
                                 <div class="row">
                                     <div class="col-sm-6 pr-sm-0">
