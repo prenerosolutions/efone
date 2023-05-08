@@ -107,8 +107,7 @@ $product_id= $_GET['product_id'];
 
 				<div class="product-desc">
 					<p>
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non.
+						<?php echo $prow['product_name'] ?>
 					</p>
 				</div><!-- End .product-desc -->
 

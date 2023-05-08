@@ -2361,8 +2361,8 @@ a.btn.disabled {
     color: #fff;
 }
 .btn-dark {
-    border-color: #222529;
-    background-color: #222529;
+    border-color: #f44c53;
+    background-color: #f44c53;
     color: #fff;
     box-shadow: none;
 }
@@ -10649,7 +10649,7 @@ footer .contact-info-label {
     /*color: #fff;*/
 }
 .header-middle.fixed {
-    background: #f44c53;
+    background: #fff;
 }
 .header-bottom.fixed .header-center {
     margin-left: 0;
@@ -10734,7 +10734,8 @@ footer .contact-info-label {
     border-top: 1px solid #e7e7e7;
 }
 .menu-depart a:last-child {
-    color: #f44c53;
+    color: #fff;
+	background: #f44c53;
 }
 .menu-depart a:last-child i {
     color: inherit;
@@ -10769,7 +10770,7 @@ footer .contact-info-label {
     letter-spacing: 0.01em;
     margin: 0;
     border: none;
-    background-color: #222529;
+    background-color: #f44c53;
     color: #fff;
 }
 .menu-depart .toggle i {
