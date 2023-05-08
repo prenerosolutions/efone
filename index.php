@@ -44,23 +44,7 @@ include('config.php');
 </head>
 
 <body>
-    <div class="page-wrapper">
-       <!-- <div class="top-notice">
-            <div class="container d-flex flex-wrap align-items-center justify-content-center text-center">
-                <img src="assets/images/demoes/demo22/banners/header-item.png" alt="Top Ads" width="237" height="49" />
-                <div class="notice-content my-2">
-                    <h3 class="d-inline-block font1 text-secondary mb-0">PortoPlus X Pro Only</h3>
-                    <div class="d-inline-block">
-                        <span class="d-inline-block skew-box product-price font1 font-weight-bold bg-secondary">$199</span>
-                        <span class="d-inline-block font1 old-price text-secondary mr-0">$299</span>
-                    </div>
-                </div>
-                <a href="#" class="btn btn-dark font1 ls-n-10 round-box my-2">code: <strong>portoplusx</strong></a>
-            </div>
-
-            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
-        </div>-->
-
+    <div class="page-wrapper">      
         <header class="header">
             <div class="header-middle sticky-header" data-sticky-options="{'mobile': true}">
                 <div class="container">
@@ -77,22 +61,19 @@ include('config.php');
                                         <div class="select-custom">
                                             <select id="cat" name="cat">
                                                 <option value="">All Categories</option>
-                                                <option value="4">Fashion</option>
-                                                <option value="12">- Women</option>
-                                                <option value="13">- Men</option>
-                                                <option value="66">- Jewellery</option>
-                                                <option value="67">- Kids Fashion</option>
-                                                <option value="5">Electronics</option>
-                                                <option value="21">- Smart TVs</option>
-                                                <option value="22">- Cameras</option>
-                                                <option value="63">- Games</option>
-                                                <option value="7">Home &amp; Garden</option>
-                                                <option value="11">Motors</option>
-                                                <option value="31">- Cars and Trucks</option>
-                                                <option value="32">- Motorcycles &amp; Powersports</option>
-                                                <option value="33">- Parts &amp; Accessories</option>
-                                                <option value="34">- Boats</option>
-                                                <option value="57">- Auto Tools &amp; Supplies</option>
+												 <?php
+								$csql = "SELECT * FROM `category`"; 
+								$cresult = $connect->query($csql);
+								while($crow = mysqli_fetch_array($cresult)){
+									?>
+												
+                                                <option value="<?php echo $crow['category_id'];?>"><?php echo $crow['category_name'] ?></option>
+												
+												<?php
+								}
+								
+									?>
+                                                
                                             </select>
                                         </div>
                                         <!-- End .select-custom -->
