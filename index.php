@@ -62,24 +62,34 @@ include('config.php');
                                             <select id="cat" name="cat">
                                                 <option value="">All Categories</option>
 												 <?php
-								$csql = "SELECT * FROM `category`"; 
-								$cresult = $connect->query($csql);
-								while($crow = mysqli_fetch_array($cresult)){
-									?>
+								
+												$csql = "SELECT * FROM `category`"; 
+								
+												$cresult = $connect->query($csql);
+								
+												while($crow = mysqli_fetch_array($cresult)){
+									
+												?>
 												
-                                                <option value="<?php echo $crow['category_id'];?>"><?php echo $crow['category_name'] ?></option>
+                                                
+												<option value="<?php echo $crow['category_id'];?>">
+													<?php echo $crow['category_name'] ?>
+												</option>
+												
 												
 												<?php
-								}
 								
-									?>
+												}
+								
+									
+												?>
                                                 
                                             </select>
                                         </div>
-                                        <!-- End .select-custom -->
+                                       
                                         <button class="btn icon-magnifier" title="search" type="submit"></button>
                                     </div>
-                                    <!-- End .header-search-wrapper -->
+                                   
                                 </form>
                             </div>
                            
@@ -87,7 +97,7 @@ include('config.php');
                     </div>
 
                     <div class="header-right ml-0 ml-lg-auto">
-                        <a href="login.php" class="header-icon d-md-block d-none mr-0">
+                        <a href="dashboard.php" class="header-icon d-md-block d-none mr-0">
                             <div class="header-user">
                                 <i class="icon-user-2"></i>
                                 <div class="header-userinfo">
@@ -97,10 +107,7 @@ include('config.php');
                             </div>
                         </a>
 
-                        <!--<a href="wishlist.html" class="header-icon">
-                            <i class="icon-wishlist-2"></i>
-                        </a>-->
-
+                        
                         <div class="dropdown cart-dropdown">
                             <a href="#" title="Cart" class="dropdown-toggle cart-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                 <i class="minicart-icon"></i>
@@ -124,7 +131,7 @@ include('config.php');
                                                 </h4>
 
                                                 <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span> × $99.00
+                                                    <span class="cart-product-qty">1</span> × £99.00
                                                 </span>
                                             </div>
                                             <!-- End .product-details -->
@@ -146,7 +153,7 @@ include('config.php');
                                                 </h4>
 
                                                 <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span> × $35.00
+                                                    <span class="cart-product-qty">1</span> × £35.00
                                                 </span>
                                             </div>
                                             <!-- End .product-details -->
@@ -168,7 +175,7 @@ include('config.php');
                                                 </h4>
 
                                                 <span class="cart-product-info">
-                                                    <span class="cart-product-qty">1</span> × $35.00
+                                                    <span class="cart-product-qty">1</span> × £35.00
                                                 </span>
                                             </div>
                                             <!-- End .product-details -->
@@ -180,29 +187,28 @@ include('config.php');
                                                 <a href="#" class="btn-remove" title="Remove Product"><span>×</span></a>
                                             </figure>
                                         </div>
-                                        <!-- End .product -->
+                                       
                                     </div>
-                                    <!-- End .cart-product -->
-
+                                    
                                     <div class="dropdown-cart-total">
                                         <span>SUBTOTAL:</span>
 
-                                        <span class="cart-total-price float-right">$134.00</span>
+                                        <span class="cart-total-price float-right">£134.00</span>
                                     </div>
-                                    <!-- End .dropdown-cart-total -->
+                                  
 
                                     <div class="dropdown-cart-action">
-                                        <a href="cart.html" class="btn btn-gray btn-block view-cart">View
+                                        <a href="cart.php" class="btn btn-gray btn-block view-cart">View
                                             Cart</a>
-                                        <a href="checkout.html" class="btn btn-dark btn-block">Checkout</a>
+                                        <a href="checkout.php" class="btn btn-dark btn-block">Checkout</a>
                                     </div>
-                                    <!-- End .dropdown-cart-total -->
+                                   
                                 </div>
-                                <!-- End .dropdownmenu-wrapper -->
+                               
                             </div>
-                            <!-- End .dropdown-menu -->
+                           
                         </div>
-                        <!-- End .dropdown -->
+                       
                     </div>
                 </div>
             </div>
@@ -262,7 +268,7 @@ include('config.php');
 										Card Reader
 									</a>
                                   
-                                    <a href="#">VIEW ALL <i class="icon-angle-right"></i></a>
+                                    <a href="product-categories.php">VIEW ALL <i class="icon-angle-right"></i></a>
                                 </div>
                             </div>
                             <ul class="menu">
@@ -286,14 +292,8 @@ include('config.php');
                                                     <li><a href="#">Phone Chargers</a>
                                                     </li>
                                                     <li><a href="#">Phone Covers</a></li>
-                                                    <li><a href="category-sidebar-right.html">Card Readers</a></li>
-                                                    <!--<li><a href="category-off-canvas.html">Off Canvas Filter</a></li>
-                                                    <li><a href="category-horizontal-filter1.html">Horizontal
-                                                            Filter1</a>
-                                                    </li>
-                                                    <li><a href="category-horizontal-filter2.html">Horizontal
-                                                            Filter2</a>
-                                                    </li>-->
+                                                    <li><a href="#">Card Readers</a></li>
+                                                    
                                                 </ul>
                                             </div>
                                             <div class="col-lg-4">
@@ -305,9 +305,7 @@ include('config.php');
                                                     <li><a href="#">Car Holders</a></li>
                                                     <li><a href="#">Power Banks</a></li>
                                                     <li><a href="#">Gaming </a></li>
-                                                    <!--<li><a href="category-6col.html">6 Columns Products</a></li>
-                                                    <li><a href="category-7col.html">7 Columns Products</a></li>
-                                                    <li><a href="category-8col.html">8 Columns Products</a></li>-->
+                                                    
                                                 </ul>
                                             </div>
                                             <div class="col-lg-4 p-0">
@@ -334,36 +332,13 @@ include('config.php');
                                 
                             </ul>
                         </nav>
-                        <!--<div class="header-dropdowns ml-auto">
-                            <a href="#" class="link-seller font-weight-bold d-none d-sm-block">Become a Seller</a>
-
-                            <div class="header-dropdown">
-                                <a href="#">USD</a>
-                                <div class="header-menu">
-                                    <ul>
-                                        <li><a href="#">EUR</a></li>
-                                        <li><a href="#">USD</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="header-dropdown">
-                                <a href="#"><i class="flag-us flag"></i>ENG</a>
-                                <div class="header-menu">
-                                    <ul>
-                                        <li><a href="#"><i class="flag-us flag mr-2"></i>ENG</a>
-                                        </li>
-                                        <li><a href="#"><i class="flag-fr flag mr-2"></i>FRA</a></li>
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>-->
+                        
                     </div>
                 </div>
             </div>
         </header>
-        <!-- End .header -->
+        
+		
         
 <main class="main">
             

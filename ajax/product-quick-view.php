@@ -107,7 +107,7 @@ $product_id= $_GET['product_id'];
 
 				<div class="product-desc">
 					<p>
-						<?php echo $prow['product_name'] ?>
+						<?php echo $prow['short_desc'] ?>
 					</p>
 				</div><!-- End .product-desc -->
 
@@ -115,52 +115,40 @@ $product_id= $_GET['product_id'];
 					<!---->
 					<li>
 						SKU:
-						<strong>654613612</strong>
+						<strong><?php echo $prow['sku_code'] ?></strong>
 					</li>
 
 					<li>
-						CATEGORY:
+						PRODUCT BRAND:
 						<strong>
-							<a href="#" class="product-category">SHOES</a>
+							<a href="#" class="product-category">
+								<?php
+	$brand_id = $prow['product_brand'] ;
+						$bsql = "SELECT * FROM `brands` WHERE `brand_id`='$brand_id'"; 			
+				$bresult = $connect->query($bsql);
+				$brow = mysqli_fetch_array($bresult);
+						echo $brow['brand_name'];
+								?>
+							</a>
 						</strong>
+					</li>
+					<li>
+						SKU:
+						<strong><?php echo $prow['product_condition'] ?></strong>
 					</li>
 				</ul>
 
-				<div class="product-filters-container">
-					<div class="product-single-filter">
-						<label>Size:</label>
-						<ul class="config-size-list">
-							<li><a href="javascript:;" class="d-flex align-items-center justify-content-center">XL</a>
-							</li>
-							<li class=""><a href="javascript:;"
-									class="d-flex align-items-center justify-content-center">L</a></li>
-							<li class=""><a href="javascript:;"
-									class="d-flex align-items-center justify-content-center">M</a></li>
-							<li class=""><a href="javascript:;"
-									class="d-flex align-items-center justify-content-center">S</a></li>
-						</ul>
-					</div>
-
-					<div class="product-single-filter">
-						<label></label>
-						<a class="font1 text-uppercase clear-btn" href="#">Clear</a>
-					</div>
-					<!---->
-				</div>
 
 				<div class="product-action">
-					<div class="price-box product-filtered-price">
-						<del class="old-price"><span>$286.00</span></del>
-						<span class="product-price">$245.00</span>
-					</div>
+					
 
 					<div class="product-single-qty">
 						<input class="horizontal-quantity form-control" type="text" />
 					</div><!-- End .product-single-qty -->
 
-					<a href="javascript:;" class="btn btn-dark add-cart mr-2" title="Add to Cart">Add to Cart</a>
+					<a href="javascript:;" name="add_to_cart" id="<?php echo $prow["product_id"] ?>" class="btn btn-dark add-cart mr-2" title="Add to Cart">Add to Cart</a>
 
-					<a href="https://www.portotheme.com/html/porto_ecommerce/ajax/cart.html" class="btn view-cart d-none">View cart</a>
+					<a href="../cart.php" class="btn view-cart d-none">View cart</a>
 				</div><!-- End .product-action -->
 
 				<hr class="divider mb-0 mt-0">

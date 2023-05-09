@@ -7,10 +7,9 @@ include('header.php');
 					<nav aria-label="breadcrumb" class="breadcrumb-nav">
 						<div class="container">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="demo4.html">Home</a></li>
-								<li class="breadcrumb-item"><a href="category.html">Shop</a></li>
+								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 								<li class="breadcrumb-item active" aria-current="page">
-									My Account
+									Dashboard
 								</li>
 							</ol>
 						</div>
@@ -23,7 +22,7 @@ include('header.php');
 			<div class="container account-container custom-account-container">
 				<div class="row">
 					<div class="sidebar widget widget-dashboard mb-lg-0 mb-3 col-lg-3 order-0">
-						<h2 class="text-uppercase">My Account</h2>
+						<h2 class="text-uppercase">Dashboard</h2>
 						<ul class="nav nav-tabs list flex-column mb-0" role="tablist">
 							<li class="nav-item">
 								<a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard"

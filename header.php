@@ -1,3 +1,6 @@
+<?php
+include('config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,11 +9,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Porto - Bootstrap eCommerce Template</title>
+	<title>E-fone CO UK</title>
 
 	<meta name="keywords" content="" />
 	<meta name="description" content="">
-	<meta name="author" content="SW-THEMES">
+	<meta name="author" content="Prenero Solutions">
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.png">
@@ -42,9 +45,9 @@
 	<div class="page-wrapper">
 		<div class="top-notice bg-primary text-white">
 			<div class="container text-center">
-				<h5 class="d-inline-block">Get Up to <b>40% OFF</b> New-Season Styles</h5>
-				<a href="category.html" class="category">MEN</a>
-				<a href="category.html" class="category ml-2 mr-3">WOMEN</a>
+				<h5 class="d-inline-block">Get Up to <b>20% OFF</b> New-Arrivals</h5>
+				<a href="#" class="category">Apple Watches</a>
+				<a href="#" class="category ml-2 mr-3">Headphones</a>
 				<small>* Limited time only.</small>
 				<button title="Close (Esc)" type="button" class="mfp-close">×</button>
 			</div><!-- End .container -->
@@ -54,7 +57,7 @@
 			<div class="header-top">
 				<div class="container">
 					<div class="header-left d-none d-sm-block">
-						<p class="top-message text-uppercase">FREE Returns. Standard Shipping Orders $99+</p>
+						<p class="top-message text-uppercase">FREE Returns. Standard Shipping Orders £99+</p>
 					</div><!-- End .header-left -->
 
 					<div class="header-right header-dropdowns ml-0 ml-sm-auto w-sm-100">
@@ -62,45 +65,24 @@
 							<a href="#">Links</a>
 							<div class="header-menu">
 								<ul>
-									<li><a href="dashboard.html">My Account</a></li>
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="wishlist.html">My Wishlist</a></li>
-									<li><a href="cart.html">Cart</a></li>
-									<li><a href="login.html" class="login-link">Log In</a></li>
+									<li><a href="dashboard.php">My Account</a></li>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Blog</a></li>									
+									<li><a href="cart.php">Cart</a></li>
+									<li><a href="login.php" class="login-link">Log In</a></li>
 								</ul>
 							</div><!-- End .header-menu -->
 						</div><!-- End .header-dropown -->
 
 						<span class="separator"></span>
 
-						<div class="header-dropdown">
-							<a href="#"><i class="flag-us flag"></i>ENG</a>
-							<div class="header-menu">
-								<ul>
-									<li><a href="#"><i class="flag-us flag mr-2"></i>ENG</a>
-									</li>
-									<li><a href="#"><i class="flag-fr flag mr-2"></i>FRA</a></li>
-								</ul>
-							</div><!-- End .header-menu -->
-						</div><!-- End .header-dropown -->
-
-						<div class="header-dropdown mr-auto mr-sm-3 mr-md-0">
-							<a href="#">USD</a>
-							<div class="header-menu">
-								<ul>
-									<li><a href="#">EUR</a></li>
-									<li><a href="#">USD</a></li>
-								</ul>
-							</div><!-- End .header-menu -->
-						</div><!-- End .header-dropown -->
-
-						<span class="separator"></span>
+				
 
 						<div class="social-icons">
 							<a href="#" class="social-icon social-facebook icon-facebook" target="_blank"></a>
 							<a href="#" class="social-icon social-twitter icon-twitter" target="_blank"></a>
 							<a href="#" class="social-icon social-instagram icon-instagram" target="_blank"></a>
+							<a href="#" class="social-icon social-linked-in icon-linked-in" target="_blank"></a>
 						</div><!-- End .social-icons -->
 					</div><!-- End .header-right -->
 				</div><!-- End .container -->
@@ -128,26 +110,44 @@
 									<div class="select-custom">
 										<select id="cat" name="cat">
 											<option value="">All Categories</option>
-											
-											
-											<option value="4">Fashion</option>
+											<?php
+											$csql = "SELECT * FROM `category`"; 
+								
+												$cresult = $connect->query($csql);
+								
+												while($crow = mysqli_fetch_array($cresult)){
+									
+												?>
+												
+                                                
+												<option value="<?php echo $crow['category_id'];?>">
+													<?php echo $crow['category_name'] ?>
+												</option>
+												
+												
+												<?php
+								
+												}
+								
+									
+												?>
 											
 											
 										</select>
-									</div><!-- End .select-custom -->
+									</div>
 									<button class="btn icon-magnifier p-0" type="submit"></button>
-								</div><!-- End .header-search-wrapper -->
+								</div>
 							</form>
-						</div><!-- End .header-search -->
+						</div>
 
 						<div class="header-contact d-none d-lg-flex pl-4 pr-4">
 							<img alt="phone" src="assets/images/phone.png" width="30" height="30" class="pb-1">
 							<h6><span>Call us now</span><a href="tel:#" class="text-dark font1">+123 5678 890</a></h6>
 						</div>
 
-						<a href="login.html" class="header-icon" title="login"><i class="icon-user-2"></i></a>
+						<a href="dashboard.php" class="header-icon" title="login"><i class="icon-user-2"></i></a>
 
-						<a href="wishlist.html" class="header-icon" title="wishlist"><i class="icon-wishlist-2"></i></a>
+						
 
 						<div class="dropdown cart-dropdown">
 							<a href="#" title="Cart" class="dropdown-toggle dropdown-arrow cart-toggle" role="button"
@@ -245,11 +245,11 @@
 										<a href="checkout.html" class="btn btn-dark btn-block">Checkout</a>
 									</div><!-- End .dropdown-cart-total -->
 								</div><!-- End .dropdownmenu-wrapper -->
-							</div><!-- End .dropdown-menu -->
-						</div><!-- End .dropdown -->
-					</div><!-- End .header-right -->
-				</div><!-- End .container -->
-			</div><!-- End .header-middle -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<div class="header-bottom sticky-header d-none d-lg-block" data-sticky-options="{'mobile': false}">
 				<div class="container">
@@ -259,7 +259,7 @@
 								<a href="demo4.html">Home</a>
 							</li>
 							<li>
-								<a href="category.html">Categories</a>
+								<a href="">Products</a>
 								<div class="megamenu megamenu-fixed-width megamenu-3cols">
 									<div class="row">
 										<div class="col-lg-4">
