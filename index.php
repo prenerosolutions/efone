@@ -239,31 +239,31 @@ include('config.php');
 										<i class="icon-category-home"></i>Home
 									</a>
                                     
-									<a href="#">
+									<a href="category-details.php?category_id=1">
 										<img src="img/category-icons/cables.png" style="width: 20px; margin-right: 5px;">
 										Data Cables
 									</a>
-									<a href="#">
+									<a href="category-details.php?category_id=2">
 										<img src="img/category-icons/car-holder.png" style="width: 20px; margin-right: 5px;">
 										Car Holders
 									</a>
-									<a href="#">
+									<a href="category-details.php?category_id=3">
 										<img src="img/category-icons/otg.png" style="width: 20px; margin-right: 5px;">
 										OTG Cables
 									</a>
-									<a href="#">
+									<a href="category-details.php?category_id=4">
 										<img src="img/category-icons/chragers.png" style="width: 20px; margin-right: 5px;">
 										Chargers
 									</a>
-									<a href="#">
+									<a href="category-details.php?category_id=5">
 										<img src="img/category-icons/phone-covers.png" style="width: 20px; margin-right: 5px;">
 										Phone Covers
 									</a>
-									<a href="#">
+									<a href="category-details.php?category_id=11">
 										<img src="img/category-icons/watch.png" style="width: 20px; margin-right: 5px;">
 										Apple Watch
 									</a>
-									<a href="#">
+									<a href="category-details.php?category_id=13">
 										<img src="img/category-icons/card-reader.png" style="width: 20px; margin-right: 5px;">
 										Card Reader
 									</a>
@@ -286,25 +286,25 @@ include('config.php');
                                             <div class="col-lg-4">
                                                 <a href="#" class="nolink">Mobile Accessories</a>
                                                 <ul class="submenu">
-                                                    <li><a href="#">Data Cables</a></li>
-                                                    <li><a href="#">OTG</a>
+                                                    <li><a href="category-details.php?category_id=1">Data Cables</a></li>
+                                                    <li><a href="category-details.php?category_id=3">OTG</a>
                                                     </li>
-                                                    <li><a href="#">Phone Chargers</a>
+                                                    <li><a href="category-details.php?category_id=4">Phone Chargers</a>
                                                     </li>
-                                                    <li><a href="#">Phone Covers</a></li>
-                                                    <li><a href="#">Card Readers</a></li>
+                                                    <li><a href="category-details.php?category_id=5">Phone Covers</a></li>
+                                                    <li><a href="category-details.php?category_id=13">Card Readers</a></li>
                                                     
                                                 </ul>
                                             </div>
                                             <div class="col-lg-4">
                                                 <a href="#" class="nolink">Car Accessories</a>
                                                 <ul class="submenu">
-                                                    <li><a href="#">Travel Adaptors</a></li>
-                                                    <li><a href="#">Car MP3</a>
+                                                    <li><a href="category-details.php?category_id=16">Travel Adaptors</a></li>
+                                                    <li><a href="category-details.php?category_id=19">Car MP3</a>
                                                     </li>
-                                                    <li><a href="#">Car Holders</a></li>
-                                                    <li><a href="#">Power Banks</a></li>
-                                                    <li><a href="#">Gaming </a></li>
+                                                    <li><a href="category-details.php?category_id=20">Car Holders</a></li>
+                                                    <li><a href="category-details.php?category_id=21">Power Banks</a></li>
+                                                    <li><a href="category-details.php?category_id=22">Gaming </a></li>
                                                     
                                                 </ul>
                                             </div>
@@ -316,16 +316,16 @@ include('config.php');
                                                     <div class="banner-content">
                                                         <h4>
                                                             <span class="">UP TO</span><br />
-                                                            <b class="">50%</b>
+                                                            <b class="">20%</b>
                                                             <i>OFF</i>
                                                         </h4>
-                                                        <a href="#" class="btn btn-sm btn-dark">SHOP NOW</a>
+                                                        <a href="shop.php" class="btn btn-sm btn-dark">SHOP NOW</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- End .megamenu -->
+                                    
                                 </li>
                                 
                                 <li><a href="#">Special Offers</a></li>
@@ -365,7 +365,7 @@ include('config.php');
                                                 </h5>
                                             </div>
 
-                                            <a href="#" class="btn btn-light btn-lg ls-10">View All
+                                            <a href="shop.php" class="btn btn-light btn-lg ls-10">View All
                                                 Now</a>
                                         </div>
                                     </div>
