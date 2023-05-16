@@ -6,7 +6,7 @@ include('header.php');
             <div class="container">
                 <nav aria-label="breadcrumb" class="breadcrumb-nav">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="demo4.html"><i class="icon-home"></i></a></li>
+                        <li class="breadcrumb-item"><a href="index.php"><i class="icon-home"></i></a></li>
                         <li class="breadcrumb-item"><a href="#">Products</a></li>
                     </ol>
                 </nav>
