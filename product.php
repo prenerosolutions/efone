@@ -1,154 +1,223 @@
 <?php
 include('header.php');
+$product_id=$_GET['product_id'];
 ?>
 
+
 <main class="main">
-            <div class="container">
-                <nav aria-label="breadcrumb" class="breadcrumb-nav">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.php"><i class="icon-home"></i></a></li>
-                        <li class="breadcrumb-item"><a href="#">Products</a></li>
-                    </ol>
-                </nav>
+            
+	<div class="container">
+				
+		<?php
 
-                <div class="product-single-container product-single-default">
-                    <div class="cart-message d-none">
-                        <strong class="single-cart-notice">“Men Black Sports Shoes”</strong>
-                        <span>has been added to your cart.</span>
-                    </div>
+				
+		$sql = "select * from products where product_id = '$product_id'"; 							
+		
+				
+		$result = $connect->query($sql);				
+		
+				
+		$prow = mysqli_fetch_array($result);	
+				
+				
+		?>
+                
+		<nav aria-label="breadcrumb" class="breadcrumb-nav">
+                   
+			<ol class="breadcrumb">
+                       
+				<li class="breadcrumb-item">
+					<a href="index.php">
+						<i class="icon-home"></i>
+					</a>
+				</li>
+                        
+				<li class="breadcrumb-item">
+					<a href="#"><?php echo $prow['product_name'] ?></a>
+				</li>
+                    
+			</ol>
+                
+		</nav>
 
-                    <div class="row">
-                        <div class="col-lg-5 col-md-6 product-single-gallery">
-                            <div class="product-slider-container">
-                                <div class="label-group">
-                                    <div class="product-label label-hot">HOT</div>
+                
+		<div class="product-single-container product-single-default">
+                    
+			<div class="cart-message d-none">
+                       
+				<strong class="single-cart-notice">“Men Black Sports Shoes”</strong>
+                        
+				<span>has been added to your cart.</span>
+                    
+			</div>
 
-                                    <div class="product-label label-sale">
+                    
+			<div class="row">
+                       
+				<div class="col-lg-5 col-md-6 product-single-gallery">
+                           
+					<div class="product-slider-container">
+                              
+						<div class="label-group">
+                                   
+							<div class="product-label label-hot">HOT</div>
+
+                                   
+							<div class="product-label label-sale">
                                         -16%
-                                    </div>
-                                </div>
+                                   
+							</div>
+                               
+						</div>
 
-                                <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
-                                    <div class="product-item">
-                                        <img class="product-single-image" src="assets/images/products/zoom/product-1-big.jpg" data-zoom-image="assets/images/products/zoom/product-1-big.jpg" width="468" height="468" alt="product" />
-                                    </div>
-                                    <div class="product-item">
-                                        <img class="product-single-image" src="assets/images/products/zoom/product-2-big.jpg" data-zoom-image="assets/images/products/zoom/product-2-big.jpg" width="468" height="468" alt="product" />
-                                    </div>
-                                    <div class="product-item">
-                                        <img class="product-single-image" src="assets/images/products/zoom/product-3-big.jpg" data-zoom-image="assets/images/products/zoom/product-3-big.jpg" width="468" height="468" alt="product" />
-                                    </div>
-                                    <div class="product-item">
-                                        <img class="product-single-image" src="assets/images/products/zoom/product-4-big.jpg" data-zoom-image="assets/images/products/zoom/product-4-big.jpg" width="468" height="468" alt="product" />
-                                    </div>
-                                    <div class="product-item">
-                                        <img class="product-single-image" src="assets/images/products/zoom/product-5-big.jpg" data-zoom-image="assets/images/products/zoom/product-5-big.jpg" width="468" height="468" alt="product" />
-                                    </div>
-                                </div>
-                                <!-- End .product-single-carousel -->
-                                <span class="prod-full-screen">
-									<i class="icon-plus"></i>
-								</span>
-                            </div>
+                              
+						<div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
+                                    
+							<div class="product-item">
+                                       
+								<img class="product-single-image" src="img/products/<?php echo $prow['product_image'] ?>" data-zoom-image="img/products/<?php echo $prow['product_image'] ?>" width="468" height="468" alt="product" />
+                                    
+							</div>
+                                    
+							<div class="product-item">
+                                        
+								<img class="product-single-image" src="img/products/<?php echo $prow['product_img1'] ?>" data-zoom-image="img/products/<?php echo $prow['product_img1'] ?>" width="468" height="468" alt="product" />
+                                    
+							</div>
+                                   
+							<div class="product-item">
+                                       
+								<img class="product-single-image" src="img/products/<?php echo $prow['product_img2'] ?>" data-zoom-image="img/products/<?php echo $prow['product_img2'] ?>" width="468" height="468" alt="product" />
+                                   
+							</div>
+                                    
+							<div class="product-item">
+                                       
+								<img class="product-single-image" src="img/products/<?php echo $prow['product_img3'] ?>" data-zoom-image="img/products/<?php echo $prow['product_img3'] ?>" width="468" height="468" alt="product" />
+                                    
+							</div>
+                                   
+							<div class="product-item">
+                                       
+								<img class="product-single-image" src="img/products/<?php echo $prow['product_img4'] ?>" data-zoom-image="img/products/<?php echo $prow['product_img4'] ?>" width="468" height="468" alt="product" />
+                                   
+							</div>
+							<div class="product-item">
+                                       
+								<img class="product-single-image" src="img/products/<?php echo $prow['product_img5'] ?>" data-zoom-image="img/products/<?php echo $prow['product_img5'] ?>" width="468" height="468" alt="product" />
+                                   
+							</div>
+							
+                               
+						</div>
+                               
+						
+                                
+						<span class="prod-full-screen">
+									
+							<i class="icon-plus"></i>
+								
+						</span>
+                           
+					</div>
 
-                            <div class="prod-thumbnail owl-dots">
+                           
+					<div class="prod-thumbnail owl-dots">
                                 <div class="owl-dot">
-                                    <img src="assets/images/products/zoom/product-1.jpg" width="110" height="110" alt="product-thumbnail" />
+                                    <img src="img/products/<?php echo $prow['product_image'] ?>" width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="assets/images/products/zoom/product-2.jpg" width="110" height="110" alt="product-thumbnail" />
+                                    <img src="img/products/<?php echo $prow['product_img1'] ?>" width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="assets/images/products/zoom/product-3.jpg" width="110" height="110" alt="product-thumbnail" />
+                                    <img src="img/products/<?php echo $prow['product_img2'] ?>" width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="assets/images/products/zoom/product-4.jpg" width="110" height="110" alt="product-thumbnail" />
+                                    <img src="img/products/<?php echo $prow['product_img3'] ?>" width="110" height="110" alt="product-thumbnail" />
                                 </div>
                                 <div class="owl-dot">
-                                    <img src="assets/images/products/zoom/product-5.jpg" width="110" height="110" alt="product-thumbnail" />
+                                    <img src="img/products/<?php echo $prow['product_img4'] ?>" width="110" height="110" alt="product-thumbnail" />
+                                </div>
+						
+						<div class="owl-dot">
+                                    <img src="img/products/<?php echo $prow['product_img5'] ?>" width="110" height="110" alt="product-thumbnail" />
                                 </div>
                             </div>
                         </div>
-                        <!-- End .product-single-gallery -->
+                        
 
                         <div class="col-lg-7 col-md-6 product-single-details">
-                            <h1 class="product-title">Men Black Sports Shoes</h1>
+                            <h1 class="product-title"><?php echo $prow['product_name'] ?></h1>
 
-                            <div class="product-nav">
-                                <div class="product-prev">
-                                    <a href="#">
-                                        <span class="product-link"></span>
-
-                                        <span class="product-popup">
-											<span class="box-content">
-												<img alt="product" width="150" height="150"
-													src="assets/images/products/product-3.jpg"
-													style="padding-top: 0px;">
-
-												<span>Circled Ultimate 3D Speaker</span>
-                                        </span>
-                                        </span>
-                                    </a>
-                                </div>
-
-                                <div class="product-next">
-                                    <a href="#">
-                                        <span class="product-link"></span>
-
-                                        <span class="product-popup">
-											<span class="box-content">
-												<img alt="product" width="150" height="150"
-													src="assets/images/products/product-4.jpg"
-													style="padding-top: 0px;">
-
-												<span>Blue Backpack for the Young</span>
-                                        </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
+                          
 
                             <div class="ratings-container">
                                 <div class="product-ratings">
                                     <span class="ratings" style="width:60%"></span>
-                                    <!-- End .ratings -->
+                                   
                                     <span class="tooltiptext tooltip-top"></span>
                                 </div>
-                                <!-- End .product-ratings -->
+                               
 
                                 <a href="#" class="rating-link">( 6 Reviews )</a>
                             </div>
-                            <!-- End .ratings-container -->
+                           
 
                             <hr class="short-divider">
 
                             <div class="price-box">
-                                <span class="old-price">$1,999.00</span>
-                                <span class="new-price">$1,699.00</span>
+                              
+                                <span class="new-price">
+									<?php					
+						if($_SESSION['user_role']== "Shop Keeper"){					
+						?>					  
+						£<?php echo $productPrice = $prow['shopkeeper_price'] ?>						
+						<?php														
+						}else {						
+						?>						
+						£<?php echo $productPrice = $prow['product_price'] ?>												
+						<?php											
+							}									
+						?></span>
                             </div>
-                            <!-- End .price-box -->
+                            
 
                             <div class="product-desc">
                                 <p>
-                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
-                                    placerat eleifend leo.
+                                    <?php echo $prow['short_desc'] ?>
                                 </p>
                             </div>
-                            <!-- End .product-desc -->
+                            
 
                             <ul class="single-info-list">
 
                                 <li>
-                                    SKU: <strong>654613612</strong>
+                                    SKU: <strong><?php echo $prow['sku_code'] ?></strong>
                                 </li>
 
                                 <li>
-                                    CATEGORY: <strong><a href="#" class="product-category">SHOES</a></strong>
+                                    PRODUCT BRAND:
+						
+									<strong>							
+							
+										<a href="#" class="product-category">								
+								
+											<?php	
+									$brand_id = $prow['product_brand'] ;						
+									$bsql = "SELECT * FROM `brands` WHERE `brand_id`='$brand_id'"; 							
+									$bresult = $connect->query($bsql);				
+									$brow = mysqli_fetch_array($bresult);						
+									echo $brow['brand_name'];								
+								?>							
+							</a>						
+						</strong>	
                                 </li>
 
                                 <li>
-                                    TAGs: <strong><a href="#" class="product-category">CLOTHES</a></strong>,
-                                    <strong><a href="#" class="product-category">SWEATER</a></strong>
+                                    Condition:
+						<strong>
+							<?php echo $prow['product_condition'] ?>
+						</strong>
                                 </li>
                             </ul>
 

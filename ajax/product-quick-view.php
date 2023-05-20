@@ -20,50 +20,50 @@ $product_id= $_GET['product_id'];
 				</div>				
 				<div class="product-single-carousel owl-carousel owl-theme show-nav-hover">					
 					<div class="product-item">						
-						<img class="product-single-image" src="admin/uploads/products/<?php echo $prow['product_image'] ?>"
-							data-zoom-image="admin/uploads/products/<?php echo $prow['product_image'] ?>" />
+						<img class="product-single-image" src="img/products/<?php echo $prow['product_image'] ?>"
+							data-zoom-image="img/products/<?php echo $prow['product_image'] ?>" />
 					</div>
 					<div class="product-item">
-						<img class="product-single-image" src="admin/uploads/products/<?php echo $prow['product_img1'] ?>"
-							data-zoom-image="admin/uploads/products/<?php echo $prow['product_img1'] ?>" />
+						<img class="product-single-image" src="img/products/<?php echo $prow['product_img1'] ?>"
+							data-zoom-image="img/products/<?php echo $prow['product_img1'] ?>" />
 					</div>
 					<div class="product-item">
-						<img class="product-single-image" src="admin/uploads/products/<?php echo $prow['product_img2'] ?>"
-							data-zoom-image="admin/uploads/products/<?php echo $prow['product_img2'] ?>" />
+						<img class="product-single-image" src="img/products/<?php echo $prow['product_img2'] ?>"
+							data-zoom-image="img/products/<?php echo $prow['product_img2'] ?>" />
 					</div>
 					<div class="product-item">
-						<img class="product-single-image" src="admin/uploads/products/<?php echo $prow['product_img3'] ?>"
-							data-zoom-image="admin/uploads/products/<?php echo $prow['product_img3'] ?>" />
+						<img class="product-single-image" src="img/products/<?php echo $prow['product_img3'] ?>"
+							data-zoom-image="img/products/<?php echo $prow['product_img3'] ?>" />
 					</div>
 					<div class="product-item">
-						<img class="product-single-image" src="admin/uploads/products/<?php echo $prow['product_img4'] ?>"
-							data-zoom-image="admin/uploads/products/<?php echo $prow['product_img4'] ?>" />
+						<img class="product-single-image" src="img/products/<?php echo $prow['product_img4'] ?>"
+							data-zoom-image="img/products/<?php echo $prow['product_img4'] ?>" />
 					</div>
 					<div class="product-item">
-						<img class="product-single-image" src="admin/uploads/products/<?php echo $prow['product_img5'] ?>"
-							data-zoom-image="admin/uploads/products/<?php echo $prow['product_img5'] ?>" />
+						<img class="product-single-image" src="img/products/<?php echo $prow['product_img5'] ?>"
+							data-zoom-image="img/products/<?php echo $prow['product_img5'] ?>" />
 					</div>
 				</div>							
 			</div>
 			
 			<div class="prod-thumbnail owl-dots">
 				<div class="owl-dot">
-					<img src="admin/uploads/products/<?php echo $prow['product_image'] ?>" />
+					<img src="img/products/<?php echo $prow['product_image'] ?>" />
 				</div>
 				<div class="owl-dot">
-					<img src="admin/uploads/products/<?php echo $prow['product_img1'] ?>" />
+					<img src="img/products/<?php echo $prow['product_img1'] ?>" />
 				</div>
 				<div class="owl-dot">
-					<img src="admin/uploads/products/<?php echo $prow['product_img2'] ?>" />
+					<img src="img/products/<?php echo $prow['product_img2'] ?>" />
 				</div>
 				<div class="owl-dot">
-					<img src="admin/uploads/products/<?php echo $prow['product_img3'] ?>" />
+					<img src="img/products/<?php echo $prow['product_img3'] ?>" />
 				</div>
 				<div class="owl-dot">
-					<img src="admin/uploads/products/<?php echo $prow['product_img4'] ?>" />
+					<img src="img/products/<?php echo $prow['product_img4'] ?>" />
 				</div>
 				<div class="owl-dot">
-					<img src="admin/uploads/products/<?php echo $prow['product_img5'] ?>" />
+					<img src="img/products/<?php echo $prow['product_img5'] ?>" />
 				</div>
 			</div>
 		</div>
