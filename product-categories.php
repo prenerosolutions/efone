@@ -3,7 +3,7 @@ include('header.php');
 ?>
 <main class="main">			
 	<div class="category-banner-container bg-gray">				
-		<div class="category-banner banner text-uppercase" style="background: no-repeat 60%/cover url('assets/images/elements/page-header.jpg');">					
+		<div class="category-banner banner text-uppercase" style="background: no-repeat 60%/cover url('img/page-header.jpg');">					
 			<div class="container position-relative">						
 				<nav aria-label="breadcrumb" class="breadcrumb-nav text-white">							
 					<ol class="breadcrumb justify-content-center">								

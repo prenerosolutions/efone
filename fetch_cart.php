@@ -1,11 +1,9 @@
-
 <?php
-
-
 session_start();
 
 $total_price = 0;
 $total_item = 0;
+$output='';
 
 $output = '<div class="dropdown-menu mobile-cart">                                
 	<a href="#" title="Close (Esc)" class="btn-close">×</a>                                

@@ -7,14 +7,13 @@
                                 <h4 class="widget-title">Contact Info</h4>
                                 <ul class="contact-info">
                                     <li>
-                                        <span class="contact-info-label">Address:</span>123 Street Name, City, England
+                                        <span class="contact-info-label">Address:</span>Based in London, England
                                     </li>
                                     <li>
-                                        <span class="contact-info-label">Phone:</span><a href="tel:">(123)
-											456-7890</a>
+                                        <span class="contact-info-label">Phone:</span><a href="tel:00447535467381">+44 7535 467381</a>
                                     </li>
                                     <li>
-                                        <span class="contact-info-label">Email:</span> <a href="https://portotheme.com/cdn-cgi/l/email-protection#85e8e4ece9c5e0fde4e8f5e9e0abe6eae8"><span class="__cf_email__" data-cfemail="412c20282d012439202c312d246f222e2c">[email&#160;protected]</span></a>
+                                        <span class="contact-info-label">Email:</span> <a href="mailto:">sales@e-fone.co.uk</a>
                                     </li>
                                     <li>
                                         <span class="contact-info-label">Working Days/Hours:</span> Mon - Sun / 9:00 AM - 8:00 PM
@@ -38,14 +37,12 @@
                                 <ul class="links">
                                     <li><a href="#">Help & FAQs</a></li>
                                     <li><a href="#">Order Tracking</a></li>
-                                    <li><a href="#">Shipping & Delivery</a></li>
-                                    <li><a href="#">Orders History</a></li>
-                                    <li><a href="#">Advanced Search</a></li>
-                                    <li><a href="dashboard.html">My Account</a></li>
-                                    <li><a href="#">Careers</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="#">Corporate Sales</a></li>
-                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="shop.php">Shop</a></li>
+                                    <li><a href="dashboard.php">My Account</a></li>
+                                    <li><a href="product-categories.php">Categories</a></li>
+                                   
                                 </ul>
                             </div>
                             <!-- End .widget -->
@@ -54,21 +51,18 @@
 
                         <div class="col-lg-3 col-sm-6">
                             <div class="widget">
-                                <h4 class="widget-title">Popular Tags</h4>
+                                <h4 class="widget-title">Quick Links</h4>
 
-                                <div class="tagcloud">
-                                    <a href="#">Bag</a>
-                                    <a href="#">Black</a>
-                                    <a href="#">Blue</a>
-                                    <a href="#">Clothes</a>
-                                    <a href="#">Fashion</a>
-                                    <a href="#">Hub</a>
-                                    <a href="#">Shirt</a>
-                                    <a href="#">Shoes</a>
-                                    <a href="#">Skirt</a>
-                                    <a href="#">Sports</a>
-                                    <a href="#">Sweater</a>
-                                </div>
+                                <ul class="links">
+                                    <li><a href="category-details.php?category_id=1">Data Cables</a></li>
+                                    <li><a href="category-details.php?category_id=3">OTG</a></li>
+                                    <li><a href="category-details.php?category_id=6">Apple Watches</a></li>
+                                    <li><a href="category-details.php?category_id=8">Travel Adopters</a></li>
+                                    <li><a href="category-details.php?category_id=9">Head Phones</a></li>
+                                    <li><a href="category-details.php?category_id=10">Car MP3</a></li>
+                                    <li><a href="category-details.php?category_id=12">Power Banks</a></li>
+                                   
+                                </ul>
                             </div>
                             <!-- End .widget -->
                         </div>
@@ -99,15 +93,15 @@
                 <div class="footer-bottom">
                     <div class="container d-sm-flex align-items-center">
                         <div class="footer-left">
-                            <span class="footer-copyright">© Porto eCommerce. 2021. All Rights Reserved</span>
+                            <span class="footer-copyright">© e-fone.co.uk 2023. All Rights Reserved. Designed By <a href="https://www.prenero.com/">Prenero Solutions</a></span>
                         </div>
 
                         <div class="footer-right ml-auto mt-1 mt-sm-0">
                             <div class="payment-icons">
-                                <span class="payment-icon visa" style="background-image: url(assets/images/payments/payment-visa.svg)"></span>
-                                <span class="payment-icon paypal" style="background-image: url(assets/images/payments/payment-paypal.svg)"></span>
-                                <span class="payment-icon stripe" style="background-image: url(assets/images/payments/payment-stripe.png)"></span>
-                                <span class="payment-icon verisign" style="background-image:  url(assets/images/payments/payment-verisign.svg)"></span>
+                                <span class="payment-icon visa" style="background-image: url(img/payments/payment-visa.svg)"></span>
+                                <span class="payment-icon paypal" style="background-image: url(img/payments/payment-paypal.svg)"></span>
+                                <span class="payment-icon stripe" style="background-image: url(img/payments/payment-stripe.png)"></span>
+                                <span class="payment-icon verisign" style="background-image:  url(img/payments/payment-verisign.svg)"></span>
                             </div>
                         </div>
                     </div>
@@ -191,33 +185,29 @@
                 </a>
             </div>
         </div>
-        <!-- End .mobile-menu-wrapper -->
+      
     </div>
-    <!-- End .mobile-menu-container -->
+   
 
     <div class="sticky-navbar">
         <div class="sticky-info">
-            <a href="demo4.html">
+            <a href="index.php">
                 <i class="icon-home"></i>Home
             </a>
         </div>
         <div class="sticky-info">
-            <a href="category.html" class="">
+            <a href="category-details.php" class="">
                 <i class="icon-bars"></i>Categories
             </a>
         </div>
+       
         <div class="sticky-info">
-            <a href="wishlist.html" class="">
-                <i class="icon-wishlist-2"></i>Wishlist
-            </a>
-        </div>
-        <div class="sticky-info">
-            <a href="login.html" class="">
+            <a href="dashboard.php" class="">
                 <i class="icon-user-2"></i>Account
             </a>
         </div>
         <div class="sticky-info">
-            <a href="cart.html" class="">
+            <a href="cart.php" class="">
                 <i class="icon-shopping-cart position-relative">
 					<span class="cart-count badge-circle">3</span>
 				</i>Cart
@@ -228,15 +218,20 @@
     <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
 
     <!-- Plugins JS File -->
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/plugins.min.js"></script>
-    <script src="assets/js/nouislider.min.js"></script>
+    
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+   
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+  
+<script src="assets/js/plugins.min.js"></script>
+  
+<script src="assets/js/nouislider.min.js"></script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.min.js"></script>
 <script>(function(){var js = "window['__CF$cv$params']={r:'7c113b59e832fcc9',m:'5fbr6yChcM2VGmNKHK88XTNF2eCgGKJhjxEDt.7P7js-1683040654-0-AS9jb5k9yKDdP2J7yEkg5kaHQIAyfXb+e0yZNhd4cPXY',u:'/cdn-cgi/challenge-platform/h/g'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../cdn-cgi/challenge-platform/h/g/scripts/jsd/b5e45436/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
 
 
-<!-- Mirrored from portotheme.com/html/porto_ecommerce/category.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 May 2023 15:21:31 GMT -->
+
 </html>

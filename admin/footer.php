@@ -23,6 +23,7 @@
   <script src="vendors/chart.js/Chart.min.js"></script>
   <script src="vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
   <script src="vendors/progressbar.js/progressbar.min.js"></script>
+<script src="js/simple-datatables/simple-datatables.js"></script>
 
   <!-- End plugin js for this page -->
   <!-- inject:js -->
@@ -37,6 +38,7 @@
   <script src="js/dashboard.js"></script>
   <script src="js/Chart.roundedBarCharts.js"></script>
   <!-- End custom js for this page-->
+<script src="DataTables/datatables.min.js"></script>
 </body>
 
 </html>
