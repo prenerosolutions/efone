@@ -1,5 +1,8 @@
 <?php
 include('header.php');
+
+$product_id = $_GET['product_id'];
+
 ?>
 
 <div class="main_content_iner ">
@@ -10,27 +13,45 @@ include('header.php');
 					<div class="white_card_header">
 						<div class="box_header m-0">
 							<div class="main-title">
-								<h3 class="m-0">Add New Product</h3>
+								<h3 class="m-0">Edit Product</h3>
 							</div>
 						</div>
 					</div>
 
 					<div class="white_card_body">
+						<?php
+						$query=mysqli_query($connect,"SELECT * FROM `products` WHERE `product_id`='$product_id'");
+										$prow = mysqli_fetch_array($query);
+						
+						?>
 						<form method="post" enctype="multipart/form-data" action="product-process.php">
 							<div class="mb-3">
+								<label class="form-label" for="Product Name">Product ID:</label>
+								<input type="text" class="form-control" value="<?php echo $prow['product_id']; ?>" name="prod_id">
+							</div>
+							<div class="mb-3">
 								<label class="form-label" for="Product Name">Product Name:</label>
-								<input type="text" class="form-control" placeholder="Enter Product Name" name="prod_name">
+								<input type="text" class="form-control" value="<?php echo $prow['product_name']; ?>" name="prod_name">
 							</div>
 							
 							<div class="mb-3">
 								<label class="form-label" for="SKU Code">SKU Code:</label>
-								<input type="text" class="form-control" placeholder="Enter SKU Code" name="sku">
+								<input type="text" class="form-control" value="<?php echo $prow['sku_code']; ?>" name="sku">
 							</div>
 							
 							<div class=" mb-3">
 								<label class="form-label" for="Product Brand">Product Brand:</label>								
 								<select class="form-control" name="prod_brand">
-									<option selected="">Choose Brands</option>
+									<?php
+									$brand_id = $prow['product_brand'];
+									$bnquery=mysqli_query($connect,"SELECT * FROM `brands` WHERE `brand_id`='$brand_id'");
+										$bnrow = mysqli_fetch_array($bnquery);
+									
+									?>
+									
+									<option value="<?php echo $bnrow['brand_id']; ?>" selected><?php echo $bnrow['brand_name']; ?></option>
+									
+									
 									<?php								
 									$bquery=mysqli_query($connect,"SELECT * FROM `brands`");
 									while($brow = mysqli_fetch_array($bquery)){								
@@ -47,7 +68,17 @@ include('header.php');
 							<div class=" mb-3">
 								<label class="form-label" for="Product Category">Product Category:</label>
 								<select name="category" id="category_id" class="form-control" onchange="checkit(this)">
-									<option selected="">Choose Category</option>
+									<?php
+									$ctg_id = $prow['product_category'];
+									$ctquery=mysqli_query($connect,"SELECT * FROM `category` WHERE `category_id`='$ctg_id'");
+										$ctrow = mysqli_fetch_array($ctquery);
+									
+									?>
+									
+									<option value="<?php echo $ctrow['category_id']; ?>" selected><?php echo $ctrow['category_name']; ?></option>
+									
+									
+									
 									<?php								
 									$cquery=mysqli_query($connect,"SELECT * FROM `category`");
 									while($crow = mysqli_fetch_array($cquery)){								
@@ -122,58 +153,82 @@ include('header.php');
 							
 							<div class=" mb-3">
 								<label class="form-label" for="Short Description">Short Description:</label>
-								<textarea class="form-control" maxlength="325" rows="3" name="short_desc" placeholder=""></textarea>
+								<textarea class="form-control" maxlength="325" rows="3" name="short_desc"><?php echo $prow['short_desc']; ?></textarea>
 							</div>
 							
 							<div class="mb-3">
 								<label class="form-label" for="Quantity">Quantity:</label>
-								<input type="number" class="form-control" name="qty" placeholder="Enter Quantity">
+								<input type="number" class="form-control" name="qty" value="<?php echo $prow['product_qty']; ?>">
 							</div>
 							
 							<div class="mb-3">
 								<label class="form-label" for="General Price">General Price:</label>
-								<input type="number" class="form-control" placeholder="Enter General Price" name="g_price">
+								<input type="number" class="form-control" value="<?php echo $prow['product_price']; ?>" name="g_price">
 							</div>
 							
 							<div class="mb-3">
 								<label class="form-label" for="Shop-Keeper">Shop-Keeper Price:</label>
-								<input type="number" class="form-control" placeholder="Enter Shop-keeper Price" name="shop_price">
+								<input type="number" class="form-control" value="<?php echo $prow['shopkeeper_price']; ?>" name="shop_price">
 							</div>
 							
 							<div class="mb-3">
 								<label class="form-label" for="Condition">Condition:</label>
 								<select name="condition"  class="form-control">
-									<option selected="">Choose Product Condition</option>
+									<option value="<?php echo $prow['product_condition']; ?>" selected><?php echo $prow['product_condition']; ?></option>
 									<option>New</option>
 									<option>Used</option>
 															
 								</select>							
 							</div>
+							<div>
+							<img src="../img/products/<?php echo $prow['product_image']; ?>" style="width: 120px;">
 							
-							<div class="input-group mb-3">								
+							</div>
+							
+							<div class="input-group mb-3">
+								
 								<input type="file" class="form-control" name="prod_img">
 								<label class="input-group-text" for="Product Image">Product Image</label>
+							</div>
+							
+							<div>
+							<img src="../img/products/<?php echo $prow['product_img1']; ?>" style="width: 120px;">
+							
 							</div>
 							
 							<div class="input-group mb-3">								
 								<input type="file" class="form-control" name="img1">
 								<label class="input-group-text" for="Product Img1">Product Img1</label>
 							</div>
+							
+							<div>
+							<img src="../img/products/<?php echo $prow['product_img2']; ?>" style="width: 120px;">
+							
+							</div>
 							<div class="input-group mb-3">								
 								<input type="file" class="form-control" name="img2">
 								<label class="input-group-text" for="Product Img2">Product Img2</label>
 							</div>
+							<div>
+							<img src="../img/products/<?php echo $prow['product_img3']; ?>" style="width: 120px;">
 							
+							</div>
 							<div class="input-group mb-3">								
 								<input type="file" class="form-control" name="img3">
 								<label class="input-group-text" for="Product Img3">Product Img3</label>
 							</div>
+							<div>
+							<img src="../img/products/<?php echo $prow['product_img4']; ?>" style="width: 120px;">
 							
+							</div>
 							<div class="input-group mb-3">								
 								<input type="file" class="form-control" name="img4">
 								<label class="input-group-text" for="Product Img4">Product Img4</label>
 							</div>
+							<div>
+							<img src="../img/products/<?php echo $prow['product_img5']; ?>" style="width: 120px;">
 							
+							</div>
 							<div class="input-group mb-3">								
 								<input type="file" class="form-control" name="img5">
 								<label class="input-group-text" for="Product Img5">Product Img5</label>
@@ -181,7 +236,7 @@ include('header.php');
 							
 							<div class=" mb-3">
 								<label class="form-label" for="Long Description">Long Description:</label>
-								<textarea class="form-control" maxlength="325" rows="7" name="long_desc" placeholder=""></textarea>
+								<textarea class="form-control" maxlength="325" rows="7" name="long_desc"><?php echo $prow['product_img5']; ?></textarea>
 							</div>
 
 							<button type="submit" class="btn btn-primary" name="add-product">Add Product</button>

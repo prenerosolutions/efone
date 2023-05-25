@@ -92,7 +92,7 @@
 					</a>
 					<ul>
 						<li><a href="users.php">All Users</a></li>
-						<li><a href="#">Add New User</a></li>
+						<li><a href="add-user.php">Add New User</a></li>
 					</ul>
 				</li>		
 				
