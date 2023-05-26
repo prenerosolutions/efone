@@ -236,10 +236,10 @@ $product_id = $_GET['product_id'];
 							
 							<div class=" mb-3">
 								<label class="form-label" for="Long Description">Long Description:</label>
-								<textarea class="form-control" maxlength="325" rows="7" name="long_desc"><?php echo $prow['product_img5']; ?></textarea>
+								<textarea class="form-control" maxlength="325" rows="7" name="long_desc"><?php echo $prow['long_desc']; ?></textarea>
 							</div>
 
-							<button type="submit" class="btn btn-primary" name="add-product">Add Product</button>
+							<button type="submit" class="btn btn-primary" name="update-product">Update Product</button>
 						</form>
 					</div>
 				</div>
