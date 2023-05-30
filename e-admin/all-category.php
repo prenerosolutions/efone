@@ -58,12 +58,13 @@ include('header.php');
 												</p>											
 											</td>																						
 											<td>
-												<button class="btn btn-info" style="float: left; color: white;">
+												<a href="edit-category.php?category=<?php echo $crow['category_id'] ?>"><button class="btn btn-info" style="float: left; color: white; margin-right: 5px;">
 													<i class="ti-pencil-alt"></i>
-												</button>												
+												</button>	</a>
+												<a href="del-category.php?category=<?php echo $crow['category_id'] ?>">
 												<button class="btn btn-danger" style="float: left; color: white;">
 													<i class="ti-trash"></i>
-												</button>										
+												</button>	</a>									
 											</td>										
 										</tr>										
 										<?php										

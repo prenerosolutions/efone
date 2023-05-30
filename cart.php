@@ -214,7 +214,7 @@ include('header.php');
 							</table>
 
 							<div class="checkout-methods">
-								<a href="cart.html" class="btn btn-block btn-dark">Proceed to Checkout
+								<a href="checkout.php" class="btn btn-block btn-dark">Proceed to Checkout
 									<i class="fa fa-arrow-right"></i></a>
 							</div>
 						</div><!-- End .cart-summary -->

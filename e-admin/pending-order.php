@@ -61,9 +61,9 @@ include('header.php');
 												<?php echo $orow['order_status']; ?>											 
 											</td>											
 											<td>
-												<button class="btn btn-info" style="float: left; color: white; margin-right: 5px;"><i class="ti-pencil-alt"></i></button>
+												<a href="view-order.php?order_id=<?php echo $orow['order_id'] ?>"><button class="btn btn-info" style="float: left; color: white; margin-right: 5px;"><i class="ti-eye"></i></button></a>
 												
-												<button class="btn btn-danger" style="float: left; color: white;"><i class="ti-trash"></i></button>																															
+												<a href="del-order.php?order_id=<?php echo $orow['order_id'] ?>"><button class="btn btn-danger" style="float: left; color: white;"><i class="ti-trash"></i></button>	</a>																														
 											</td>
 
 										</tr>

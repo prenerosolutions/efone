@@ -1,5 +1,25 @@
 <?php
-include('../config.php');
+session_start(); 
+include('config.php');
+ini_set("display_errors","off");
+ 
+
+	if (!isset($_SESSION['username'])) {
+		$_SESSION['first_name'] = $fname;
+		$_SESSION['last_name'] = $lname;
+		$_SESSION['user_pic'] = $user_pic;
+		$_SESSION['user_role'] = $user_role;
+		$_SESSION['msg'] = "You must log in first";
+		header('location: index.php');
+	}
+
+	if (isset($_POST['logout'])) {
+		session_destroy();
+		unset($_SESSION['username']);
+		header("location: index.php");
+	}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -111,84 +131,70 @@ include('../config.php');
 
 												</div>
 
-<div class="single_notify d-flex align-items-center">
-<div class="notify_thumb">
-<a href="#"><img src="img/staf/4.png" alt=""></a>
-</div>
-<div class="notify_content">
-<a href="#"><h5>Awesome packages</h5></a>
-<p>Lorem ipsum dolor sit amet</p>
-</div>
-</div>
 
-<div class="single_notify d-flex align-items-center">
-<div class="notify_thumb">
-<a href="#"><img src="img/staf/3.png" alt=""></a>
-</div>
-<div class="notify_content">
-<a href="#"><h5>what a packages</h5></a>
-<p>Lorem ipsum dolor sit amet</p>
-</div>
-</div>
+											</div>
 
-<div class="single_notify d-flex align-items-center">
-<div class="notify_thumb">
-<a href="#"><img src="img/staf/2.png" alt=""></a>
-</div>
-<div class="notify_content">
-<a href="#"><h5>Cool Marketing </h5></a>
-<p>Lorem ipsum dolor sit amet</p>
-</div>
-</div>
+											<div class="nofity_footer">
 
-<div class="single_notify d-flex align-items-center">
-<div class="notify_thumb">
-<a href="#"><img src="img/staf/4.png" alt=""></a>
-</div>
-<div class="notify_content">
-<a href="#"><h5>Awesome packages</h5></a>
-<p>Lorem ipsum dolor sit amet</p>
-</div>
-</div>
+												<div class="submit_button text-center pt_20">
 
-<div class="single_notify d-flex align-items-center">
-<div class="notify_thumb">
-<a href="#"><img src="img/staf/3.png" alt=""></a>
-</div>
-<div class="notify_content">
-<a href="#"><h5>what a packages</h5></a>
-<p>Lorem ipsum dolor sit amet</p>
-</div>
-</div>
-</div>
-<div class="nofity_footer">
-<div class="submit_button text-center pt_20">
-<a href="#" class="btn_1">See More</a>
- </div>
-</div>
-</div>
+													<a href="#" class="btn_1">See More</a>
+ 
+												</div>
 
-</li>
-<li>
-<a class="CHATBOX_open nav-link-notify" href="#"> <img src="img/icon/msg.svg" alt=""> </a>
-</li>
-</div>
-<div class="profile_info">
-<img src="img/client_img.png" alt="#">
-<div class="profile_info_iner">
-<div class="profile_author_name">
-<p>Neurologist </p>
-<h5>Dr. Robar Smith</h5>
-</div>
-<div class="profile_info_details">
-<a href="#">My Profile </a>
-<a href="#">Settings</a>
-<a href="#">Log Out </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+											</div>
+
+										</div>
+
+
+									</li>
+
+									
+									<li>
+
+										<a class="CHATBOX_open nav-link-notify" href="#"> 
+											<img src="img/icon/msg.svg" alt=""> 
+										</a>
+
+									</li>
+
+								</div>
+
+								
+								<div class="profile_info">
+
+									<img src="../img/users/<?php echo $_SESSION['user_pic']; ?>" alt="#">
+
+									<div class="profile_info_iner">
+
+										<div class="profile_author_name">
+
+											<p><?php echo $_SESSION['user_role'];   ?>   </p>
+
+											<h5><?php echo $_SESSION['first_name'];   ?>  <?php echo $_SESSION['last_name'];   ?></h5>
+
+										</div>
+
+										<div class="profile_info_details">
+
+											<a href="#">My Profile </a>
+
+											<a href="#">Settings</a>
+
+											<?php  if (isset($_SESSION['username'])) : ?>   <a href="index.php?logout='1'">Log Out </a> <?php endif ?>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>

@@ -57,9 +57,12 @@ include('header.php');
 													<?php echo $crow['brand_desc']; ?>
 												</p>											
 											</td>																						
-											<td>												
-												<button class="btn btn-info" style="float: left; color: white; margin-right: 10px;"><i class="ti-pencil-alt"></i></button>												
-												<button class="btn btn-danger" style="float: left; color: white;"><i class="ti-trash"></i></button>																															
+											<td>	
+												<a href="edit-brand.php?brand=<?php echo $crow['brand_id'];  ?>">
+												<button class="btn btn-info" style="float: left; color: white; margin-right: 10px;"><i class="ti-pencil-alt"></i></button>					
+													</a>
+												<a href="del-brand.php?brand=<?php echo $crow['brand_id'];  ?>">
+												<button class="btn btn-danger" style="float: left; color: white;"><i class="ti-trash"></i></button>							</a>																								
 											</td>
 										</tr>
 										<?php																			

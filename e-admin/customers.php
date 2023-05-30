@@ -62,7 +62,7 @@ include('header.php');
 												<?php echo $crow['user_role']; ?>											
 											</td>											
 											<td>																								
-												<button class="btn btn-danger" style="float: left; color: white;"><i class="ti-trash"></i></button>	
+												<a href="del-customer.php?customer_id=<?php echo $crow['cus_id'] ?>"><button class="btn btn-danger" style="float: left; color: white;"><i class="ti-trash"></i></button>	</a>
 											</td>
 										</tr>
 										<?php

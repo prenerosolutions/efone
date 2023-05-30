@@ -24,7 +24,7 @@ $product_id = $_GET['product_id'];
 										$prow = mysqli_fetch_array($query);
 						
 						?>
-						<form method="post" enctype="multipart/form-data" action="product-process.php">
+						<form method="post" enctype="multipart/form-data" action="update-product.php">
 							<div class="mb-3">
 								<label class="form-label" for="Product Name">Product ID:</label>
 								<input type="text" class="form-control" value="<?php echo $prow['product_id']; ?>" name="prod_id">
@@ -143,7 +143,7 @@ $product_id = $_GET['product_id'];
 							<div class=" mb-3" id="ifYes"  style="display: none;">
 								<label class="form-label" for="Sub Category">Product Sub Category:</label>
 								<select name="sub_ctg_id" id="sub_category_id" class="form-control" onchange="checkSubit(this)">
-									<option selected="">Choose Sub Category</option>									
+									<option selected><?php echo $prow['sub_category']; ?></option>									
 																
 								</select>							
 							
