@@ -1,5 +1,27 @@
 <?php
-include('../config.php');
+session_start(); 
+include('config.php');
+ini_set("display_errors","off");
+ 
+
+	if (!isset($_SESSION['username'])) {
+		$_SESSION['first_name'] = $fname;
+		$_SESSION['last_name'] = $lname;
+		//$_SESSION['cus_id'] = $cus_id;
+		//$_SESSION['last_name'] = $last_name;
+				
+				//$_SESSION['user_mobile'] = $user_mobile;
+		$_SESSION['msg'] = "You must log in first";
+		header('location: index.php');
+	}
+
+	if (isset($_POST['logout'])) {
+		session_destroy();
+		unset($_SESSION['username']);
+		header("location: index.php");
+	}
+
+
 ?>
 
 <!DOCTYPE html>

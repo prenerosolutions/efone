@@ -47,109 +47,58 @@ $crow = mysqli_fetch_array($cresult);
                   
 
                         <div class="row">
-							<?php
-							$sql = "SELECT products.* FROM products WHERE products.product_category = '$category_id' ORDER BY  products.product_id DESC "; 
-								$result = $connect->query($sql);
-									
-								while($prow = mysqli_fetch_array($result)){
+						<section class="simple-section mt-5">
+					<h4 class="heading-bottom-border text-uppercase">Sub Categories</h4>
+					<div class="row">
+						<?php
+							$subsql = "SELECT * FROM `sub_categories` WHERE `category_id`='$category_id'"; 												
+
+							$subresult = $connect->query($subsql);												
+
+							while($subrow = mysqli_fetch_array($subresult)){
 							?>
-							
-                            <div class="col-6 col-sm-4">
-                                <div class="product-default">
-                                    <figure>
-                                        <a href="product.html">
-                                            <img src="img/products/<?php echo $prow['product_image'] ;?>" width="280" height="280" alt="product" />
-                                            <img src="img/products/<?php echo $prow['product_img1'] ;?>" width="280" height="280" alt="product" />
-                                        </a>
-
-                                        <div class="label-group">
-                                            <div class="product-label label-hot">HOT</div>
-                                           
-                                        </div>
-                                    </figure>
-
-                                    <div class="product-details">
-                                        <div class="category-wrap">
-                                            <div class="category-list">
-                                                <a href="category-details.php?category_id=<?php echo $prow['product_category'];?>" class="product-category"><?php echo $prow['product_category'] ;?></a>
-                                            </div>
-                                        </div>
-
-                                        <h3 class="product-title"> <a href="#"><?php echo $prow['product_name'] ;?></a> </h3>
-
-                                        <div class="ratings-container">
-                                            <div class="product-ratings">
-                                                <span class="ratings" style="width:100%"></span>
-                                                <!-- End .ratings -->
-                                                <span class="tooltiptext tooltip-top"></span>
-                                            </div>                                           
-                                        </div>                                      
-
-                                        <div class="price-box">
-                                       
-                                            <span class="product-price"><?php					
-						if($_SESSION['user_role']== "Shop Keeper"){					
-						?>					  
-						£<?php echo $productPrice = $prow['shopkeeper_price'] ?>						
-						<?php														
-						}else {						
-						?>						
-						£<?php echo $productPrice = $prow['product_price'] ?>												
-						<?php											
-							}									
-						?></span>
-                                        </div>
-                                       
-
-                                        <div class="product-action">
-                                          
-                                            <a href="#" class="btn-icon btn-add-cart"><i
-													class="fa fa-arrow-right"></i><span>Add to Cart</span></a>
-                                            <a href="ajax/product-quick-view.php?product_id=<?php echo $prow['product_id'];?>" class="btn-quickview" title="Quick View"><i class="fas fa-external-link-alt"></i></a>
-                                        </div>
-                                    </div>                                    
-                                </div>
-                            </div>
-                          <?php
-								}
-									?>
-							
+						
+						<div class="col-lg-4 col-sm-4 col-6">
+							<div class="product-category">
+								<a href="sub-category-products.php?sub_category_id=<?php echo $subrow['sub_ctg_id'] ?>">
+									<figure>
+										<img src="img/sub-categories/<?php echo $subrow['sub_ctg_img'] ?>" width="300" height="300"
+											alt="category">
+									</figure>
+									<div class="category-content">
+										<h3><?php echo $subrow['sub_ctg_name'] ?></h3>
+										
+										<?php
+													$sub_ctg_id = $subrow['sub_ctg_id'];
+													$psql = "SELECT * FROM `products` WHERE `sub_category`='$sub_ctg_id'"; 
+								
+												$presult = $connect->query($psql);
+														//$prow = mysqli_fetch_array($presult)
+													$rowcount=mysqli_num_rows($presult);	
+													
+													?>
+										
+										
+										<span><mark class="count"><?php echo $rowcount; ?></mark> products</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						
+						<?php
+						}
+						?>
+						
+						
+					</div>
+				</section>
 							
                         </div>
-                        <!-- End .row -->
+                      
 
-                        <nav class="toolbox toolbox-pagination">
-                            <div class="toolbox-item toolbox-show">
-                                <label>Show:</label>
-
-                                <div class="select-custom">
-                                    <select name="count" class="form-control">
-										<option value="12">12</option>
-										<option value="24">24</option>
-										<option value="36">36</option>
-									</select>
-                                </div>
-                                <!-- End .select-custom -->
-                            </div>
-                            <!-- End .toolbox-item -->
-
-                            <ul class="pagination toolbox-item">
-                                <li class="page-item disabled">
-                                    <a class="page-link page-link-btn" href="#"><i class="icon-angle-left"></i></a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><span class="page-link">...</span></li>
-                                <li class="page-item">
-                                    <a class="page-link page-link-btn" href="#"><i class="icon-angle-right"></i></a>
-                                </li>
-                            </ul>
-                        </nav>
+                        
                     </div>
-                    <!-- End .col-lg-9 -->
+                 
 
                     <div class="sidebar-overlay"></div>
                     <aside class="sidebar-shop col-lg-3 order-lg-first mobile-sidebar">
@@ -180,7 +129,7 @@ $crow = mysqli_fetch_array($cresult);
 									?>
                                         </ul>
                                     </div>
-                                    <!-- End .widget-body -->
+                                   
                                 </div>
                                 
                             </div>

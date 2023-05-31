@@ -79,10 +79,11 @@ include('header.php');
 											
 
 											<td>
-												<button class="btn btn-info" style="float: left; color: white;"><i class="ti-pencil-alt"></i></button>
-												
+												<a href="edit-sub-category.php?sub_id=<?php echo $crow['sub_ctg_id']  ?>">
+												<button class="btn btn-info" style="float: left; color: white; margin-right: 5px;"><i class="ti-pencil-alt"></i></button></a>
+												<a href="del-sub-category.php?sub_id=<?php echo $crow['sub_ctg_id']  ?>">
 												<button class="btn btn-danger" style="float: left; color: white;"><i class="ti-trash"></i></button>
-																				
+													</a>							
 											
 											</td>
 

@@ -91,9 +91,9 @@ include('header.php');
 												<button class="btn btn-info" style="float: left; color: white; margin-right: 5px;">
 													<i class="ti-pencil-alt"></i>
 												</button>					</a>							
-												<button class="btn btn-danger" style="float: left; color: white;">
+												<a href="delete-product.php?product_id=<?php echo $crow['product_id'];?>"><button class="btn btn-danger" style="float: left; color: white;">
 													<i class="ti-trash"></i>
-												</button>		
+												</button>		</a>
 											</td>
 										</tr>
 										<?php
