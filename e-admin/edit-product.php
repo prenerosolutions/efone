@@ -26,8 +26,8 @@ $product_id = $_GET['product_id'];
 						?>
 						<form method="post" enctype="multipart/form-data" action="update-product.php">
 							<div class="mb-3">
-								<label class="form-label" for="Product Name">Product ID:</label>
-								<input type="text" class="form-control" value="<?php echo $prow['product_id']; ?>" name="prod_id">
+								
+								<input type="hidden" class="form-control" value="<?php echo $prow['product_id']; ?>" name="prod_id">
 							</div>
 							<div class="mb-3">
 								<label class="form-label" for="Product Name">Product Name:</label>

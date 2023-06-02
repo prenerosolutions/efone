@@ -38,10 +38,7 @@
 				$crow = mysqli_fetch_array($results);
 				$_SESSION['first_name'] = $crow['first_name'];
 				$_SESSION['last_name'] = $crow['last_name'];
-				$_SESSION['user_id'] = $crow['user_id'];
-				$_SESSION['user_pic'] = $crow['user_pic'];
-				$_SESSION['user_role'] = $crow['user_role'];
-				
+				$_SESSION['cus_id'] = $crow['cus_id'];
 				$_SESSION['success'] = "You are now logged in";
 				header('location: dashboard.php');
 			}else {

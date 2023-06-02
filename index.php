@@ -736,13 +736,23 @@ include('default-header.php');
                             }
                         }
                     }">
-                        <img src="img/brands/brand1.png" width="200" height="50" alt="brand">
-                        <img src="img/brands/brand2.png" width="200" height="50" alt="brand">
-                        <img src="img/brands/brand3.png" width="200" height="50" alt="brand">
-                        <img src="img/brands/brand4.png" width="200" height="50" alt="brand">
-                        <img src="img/brands/brand5.png" width="200" height="50" alt="brand">
+						<?php
+							
+								$bsql = "SELECT * FROM `brands`"; 
+								$bresult = $connect->query($bsql);
+									
+								while($brow = mysqli_fetch_array($bresult)){
+							
+							?>
+							
+                        <img src="img/brands/<?php echo $brow['brand_img'];?>" style="height: 100px;"   alt="<?php echo $brow['brand_name'];?>">
+						
+						<?php
+								}
+									?>
+                       
                     </div>
-                    <!-- End .brands-slider -->
+                    
                 </div>
             </section>
         </main>

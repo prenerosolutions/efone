@@ -22,8 +22,8 @@ $sub_id = $_GET['sub_id'];
 						?>
 						<form method="post" action="update-sub-category.php" enctype="multipart/form-data">
 							<div class="mb-3">								
-								<label class="form-label" for="Sub Category name">Sub Category ID</label>
-								<input type="text" class="form-control" value="<?php echo $sub_id; ?>" name="sub_id">
+								
+								<input type="hidden" class="form-control" value="<?php echo $sub_id; ?>" name="sub_id">
 							</div>
 							<div class=" mb-3">
 								<label class="form-label">Product Category</label>

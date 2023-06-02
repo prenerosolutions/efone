@@ -23,8 +23,8 @@ $ctg_id = $_GET['category'];
 					<div class="white_card_body">
 						<form method="post" action="update-category.php" enctype="multipart/form-data">
 							<div class="mb-3">
-								<label class="form-label" for="category name">Category ID</label>
-								<input type="text" class="form-control" value="<?php echo $crow['category_id']; ?>" name="ctg_id">
+								
+								<input type="hidden" class="form-control" value="<?php echo $crow['category_id']; ?>" name="ctg_id">
 							</div>	
 							<div class="mb-3">
 								<label class="form-label" for="category name">Category Name</label>

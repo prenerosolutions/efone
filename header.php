@@ -16,7 +16,7 @@ include('config.php');
 	<meta name="author" content="Prenero Solutions">
 
 	<!-- Favicon -->
-	<link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.png">
+	<link rel="icon" type="image/x-icon" href="img/icon.png">
 
 
 	<script>

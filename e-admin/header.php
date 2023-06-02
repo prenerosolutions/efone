@@ -7,8 +7,16 @@ ini_set("display_errors","off");
 	if (!isset($_SESSION['username'])) {
 		$_SESSION['first_name'] = $fname;
 		$_SESSION['last_name'] = $lname;
+
 		$_SESSION['user_pic'] = $user_pic;
 		$_SESSION['user_role'] = $user_role;
+
+		//$_SESSION['cus_id'] = $cus_id;
+		//$_SESSION['last_name'] = $last_name;
+				
+				
+//$_SESSION['user_mobile'] = $user_mobile;
+
 		$_SESSION['msg'] = "You must log in first";
 		header('location: index.php');
 	}

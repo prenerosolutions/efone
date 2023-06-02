@@ -23,8 +23,8 @@ $brand_id = $_GET['brand'];
 						
 						<form method="post" action="update-brand.php" enctype="multipart/form-data">
 							<div class="mb-3">
-								<label class="form-label" for="brand name">Brand Name</label>
-								<input type="text" class="form-control" value="<?php echo $brand_id ?>" name="brand_id">
+								
+								<input type="hidden" class="form-control" value="<?php echo $brand_id ?>" name="brand_id">
 							</div>
 							<div class="mb-3">
 								<label class="form-label" for="brand name">Brand Name</label>
@@ -46,7 +46,7 @@ $brand_id = $_GET['brand'];
 								<label class="input-group-text" for="Brand image">Brand Image</label>
 							</div>
 							
-							<button type="submit" class="btn btn-primary" name="add-brand">Add Brand</button>
+							<button type="submit" class="btn btn-primary" name="update-brand">Update Brand</button>
 
 						</form>
 					</div>
