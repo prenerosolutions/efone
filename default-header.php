@@ -90,7 +90,7 @@ include('config.php');
                             <div class="cart-overlay"></div>
 
                             <?php
-							include('fetch_cart.php');
+							//include('fetch_cart.php');
 							?>
                            
                         </div>

@@ -50,7 +50,7 @@ include('header.php');
 							<div class="mb-3">
 								<label class="form-label" for="User Role">User Role:</label>
 								<select name="user_role"  class="form-control">
-									<option selected="">Choose User Role</option>
+									<option value="">Choose User Role</option>
 									<option value="administrator">Administrator</option>
 									<option value="manager">Manager</option>
 															

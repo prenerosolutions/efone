@@ -67,8 +67,17 @@ include('header.php');
 												<?php echo $crow['user_mobile']; ?>											
 											</td>																					
 											<td>												
-												<button class="btn btn-info" style="float: left; color: white;"><i class="ti-pencil-alt"></i></button>
+												
+												<a href="edit-users.php?user_id=<?php echo $crow['user_id']; ?>">
+												
+													<button class="btn btn-info" style="float: left; color: white; margin-right: 5px;">
+														<i class="ti-pencil-alt"></i>
+													</button>
+													
+												</a>
+												<a href="del-user.php?user_id=<?php echo $crow['user_id']; ?>">
 												<button class="btn btn-danger" style="float: left; color: white;"><i class="ti-trash"></i></button>	
+													</a>
 											</td>
 										</tr>
 										<?php
