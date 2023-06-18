@@ -233,8 +233,15 @@ include('default-header.php');
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="#" title="Add To Cart" class="btn-icon btn-add-cart product-type-simple"><i
-                                                class="icon-shopping-cart"></i></a>
+										<form action="cart.php" method="POST">
+    <input type="hidden" name="product_id" value="<?php echo $prow['product_id']; ?>">
+    <button type="submit" class="btn btn-add-cart product-type-simple" name="add_to_cart">
+        <i class="icon-shopping-cart"></i> Add to Cart
+    </button>
+</form>
+										
+                                       <!-- <a href="#" title="Add To Cart" class="btn-icon btn-add-cart product-type-simple"><i
+                                                class="icon-shopping-cart"></i></a>-->
                                     </div>
                                     <a href="ajax/product-quick-view.php?product_id=<?php echo $prow['product_id'];?>" class="btn-quickview" title="Quick View">Quick
                                         View</a>

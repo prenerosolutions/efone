@@ -3,124 +3,139 @@ include('header.php');
 ?>
 
 <main class="main">
-			<div class="container">
-				<ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
-					<li class="active">
-						<a href="cart.html">Shopping Cart</a>
-					</li>
-					<li>
-						<a href="checkout.html">Checkout</a>
-					</li>
-					<li class="disabled">
-						<a href="cart.html">Order Complete</a>
-					</li>
-				</ul>
+			
+	<div class="container">
+				
+		<ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
+				
+					
+			<li class="active">
+						
+				<a href="cart.php">Shopping Cart</a>
+					
+			</li>
+					
+			<li>
+						
+				<a href="checkout.php">Checkout</a>
+					
+			</li>
+					
+			<li class="disabled">
+						
+				<a href="cart.php">Order Complete</a>
+					
+			</li>
+				
+		</ul>
 
-				<div class="row">
-					<div class="col-lg-8">
-						<div class="cart-table-container">
-							<table class="table table-cart">
-								<thead>
-									<tr>
-										<th class="thumbnail-col"></th>
-										<th class="product-col">Product</th>
-										<th class="price-col">Price</th>
-										<th class="qty-col">Quantity</th>
-										<th class="text-right">Subtotal</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="product-row">
-										<td>
-											<figure class="product-image-container">
-												<a href="product.html" class="product-image">
-													<img src="assets/images/products/product-4.jpg" alt="product">
-												</a>
+				
+		<div class="row">
+					
+			<div class="col-lg-8">
+						
+				<div class="cart-table-container">
+							
+					<table class="table table-cart">
+							
+						<thead>
+								
+							<tr>
+								
+								<th class="thumbnail-col"></th>
+								
+								<th class="product-col">Product</th>
+								
+								<th class="price-col">Price</th>
+								
+								<th class="qty-col">Quantity</th>
+								
+								<th class="text-right">Subtotal</th>
+								
+							</tr>
+							
+						</thead>
+						
+						<tbody>
+						
+							<tr class="product-row">
+							
+								<td>
+								
+									<figure class="product-image-container">
+									
+										<a href="product.html" class="product-image">
+										
+											<img src="assets/images/products/product-4.jpg" alt="product">
+											
+										</a>
 
-												<a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
-											</figure>
-										</td>
-										<td class="product-col">
-											<h5 class="product-title">
-												<a href="product.html">Men Watch</a>
-											</h5>
-										</td>
-										<td>$17.90</td>
-										<td>
-											<div class="product-single-qty">
-												<input class="horizontal-quantity form-control" type="text">
-											</div><!-- End .product-single-qty -->
-										</td>
-										<td class="text-right"><span class="subtotal-price">$17.90</span></td>
-									</tr>
+										
+										
+										<a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+										
+									</figure>
+									
+								</td>
+								
+								<td class="product-col">
+								
+									<h5 class="product-title">
+									
+										<a href="product.html">Men Watch</a>
+										
+									</h5>
+									
+								</td>
+								
+								<td>$17.90</td>
+								
+								<td>
+								
+									<div class="product-single-qty">
+									
+										<input class="horizontal-quantity form-control" type="text">
+										
+									</div><!-- End .product-single-qty -->
+									
+								</td>
+								
+								<td class="text-right"><span class="subtotal-price">$17.90</span></td>
+								
+							</tr>
 
-									<tr class="product-row">
-										<td>
-											<figure class="product-image-container">
-												<a href="product.html" class="product-image">
-													<img src="assets/images/products/product-3.jpg" alt="product">
-												</a>
+									
 
-												<a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
-											</figure>
-										</td>
-										<td class="product-col">
-											<h5 class="product-title">
-												<a href="product.html">Men Watch</a>
-											</h5>
-										</td>
-										<td>$17.90</td>
-										<td>
-											<div class="product-single-qty">
-												<input class="horizontal-quantity form-control" type="text">
-											</div><!-- End .product-single-qty -->
-										</td>
-										<td class="text-right"><span class="subtotal-price">$17.90</span></td>
-									</tr>
-
-									<tr class="product-row">
-										<td>
-											<figure class="product-image-container">
-												<a href="product.html" class="product-image">
-													<img src="assets/images/products/product-6.jpg" alt="product">
-												</a>
-
-												<a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
-											</figure>
-										</td>
-										<td class="product-col">
-											<h5 class="product-title">
-												<a href="product.html">Men Black Gentle Belt</a>
-											</h5>
-										</td>
-										<td>$17.90</td>
-										<td>
-											<div class="product-single-qty">
-												<input class="horizontal-quantity form-control" type="text">
-											</div><!-- End .product-single-qty -->
-										</td>
-										<td class="text-right"><span class="subtotal-price">$17.90</span></td>
-									</tr>
-								</tbody>
+									
+								
+						</tbody>
 
 
-								<tfoot>
-									<tr>
-										<td colspan="5" class="clearfix">
-											<div class="float-left">
-												<div class="cart-discount">
-													<form action="#">
-														<div class="input-group">
-															<input type="text" class="form-control form-control-sm"
-																placeholder="Coupon Code" required>
-															<div class="input-group-append">
-																<button class="btn btn-sm" type="submit">Apply
-																	Coupon</button>
+								
+						<tfoot>
+									
+							<tr>
+							
+								<td colspan="5" class="clearfix">
+								
+									<div class="float-left">
+									
+										<div class="cart-discount">
+										
+											<form action="#">
+											
+												<div class="input-group">
+												
+													<input type="text" class="form-control form-control-sm"	placeholder="Coupon Code" required>
+															
+													<div class="input-group-append">
+													
+														<button class="btn btn-sm" type="submit">Apply Coupon</button>
 															</div>
-														</div><!-- End .input-group -->
+														</div>
 													</form>
 												</div>
-											</div><!-- End .float-left -->
+											</div>
 
 											<div class="float-right">
 												<button type="submit" class="btn btn-shop btn-update-cart">

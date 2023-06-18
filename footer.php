@@ -217,6 +217,47 @@
 
     <a id="scroll-top" href="#top" title="Top" role="button"><i class="icon-angle-up"></i></a>
 
+
+
+<script>
+    // Function to update the cart products
+    function updateCartProducts() {
+        $.ajax({
+            url: 'cart.php',
+            method: 'GET',
+            success: function(response) {
+                $('#cart-products').html(response);
+            }
+        });
+    }
+
+    // Call the updateCartProducts function when the page loads
+    $(document).ready(function() {
+        updateCartProducts();
+    });
+
+    // Handle the form submission and add the product to the cart using AJAX
+    $('body').on('submit', 'form', function(event) {
+        event.preventDefault();
+
+        var form = $(this);
+        var url = form.attr('action');
+        var method = form.attr('method');
+        var data = form.serialize();
+
+        $.ajax({
+            url: url,
+            method: method,
+            data: data,
+            success: function(response) {
+                updateCartProducts();
+                console.log(response);
+            }
+        });
+    });
+</script>
+
+
     <!-- Plugins JS File -->
     
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>

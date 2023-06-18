@@ -81,19 +81,9 @@ include('config.php');
                         </a>
 
                         
-                        <div class="dropdown cart-dropdown">
-                            <a href="#" title="Cart" class="dropdown-toggle cart-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
-                                <i class="minicart-icon"></i>
-                                <span class="cart-count badge-circle">3</span>
-                            </a>
-
-                            <div class="cart-overlay"></div>
-
-                            <?php
-							//include('fetch_cart.php');
-							?>
-                           
-                        </div>
+                        <?php
+						include('fetch_cart.php');
+						?>
                        
                     </div>
                 </div>
